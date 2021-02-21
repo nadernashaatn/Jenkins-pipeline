@@ -1,5 +1,5 @@
 @Library('shared-library')
-import com.mcnz.uatInputdss
+import com.mcnz.uatInput
 def uatInput = new uatInput()
 
 pipeline {
