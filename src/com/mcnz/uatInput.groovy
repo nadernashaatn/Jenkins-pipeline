@@ -12,7 +12,7 @@ package com.mcnz
     }
     else {
       println "Approval file does not exist."
-    } 
-    return false; 
+      return false; 
+    }    
   }
 }
