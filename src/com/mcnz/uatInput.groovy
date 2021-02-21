@@ -6,7 +6,9 @@ package com.mcnz
 
   public class uatInput {
     def buildIsUatApproved() {
-    def file = new File("/var/jenkins_home/workspace/Pipeline/approved.txt")
+    def file = new File("./approved.txt")
+    def workspace = pwd()
+    echo $workspace
     if (file.exists()){
       return true;
     }
