@@ -1,6 +1,7 @@
 @Library('shared-library')
 import com.mcnz.uatInput
-def uatInput = new uatInput()
+WORKSPACE = pwd()
+def uatInput = new uatInput(WORKSPACE)
 
 pipeline {
     agent any

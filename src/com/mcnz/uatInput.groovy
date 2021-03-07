@@ -5,9 +5,9 @@
 package com.mcnz
 
 
-  public class uatInput {
+  public class uatInput (envPath) {
     def buildIsUatApproved() {
-    def file = new File("./approved.txt")
+    def file = new File("${envPath}/approved.txt")
     if (file.exists()){
       return true;
     }
