@@ -1,6 +1,6 @@
 @Library('shared-library')
 import com.mcnz.uatInput
-WORKSPACE = pwd()
+env.WORKSPACE = pwd()
 def uatInput = new uatInput()
 
 pipeline {
@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage ('Run only if approval exists') {
             when {
-                expression { uatInput.buildIsUatApproved(${WORKSPACE}) }
+                expression { uatInput.buildIsUatApproved(${env.WORKSPACE}) }
             }
             steps {
                 echo "The build has been approved!!!"
