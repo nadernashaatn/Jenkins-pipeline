@@ -3,10 +3,11 @@
 * https://github.com/learn-devops-fast/jenkins-shared-library.git
 */
 package com.mcnz
+env.WORKSPACE = pwd()
 
   public class uatInput {
     def buildIsUatApproved() {
-    def file = new File("./approved.txt")
+    def file = new File("${env.WORKSPACE}/approved.txt")
     if (file.exists()){
       return true;
     }
