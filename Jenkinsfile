@@ -6,12 +6,12 @@ pipeline {
     agent any
     stages {
         stage ('Run only if approval exists') {
-                if (expression { uatInput.buildIsUatApproved() })
-                {  
-                    steps {echo "The build has been approved!!!"}
-                }else {
-                    steps { echo "The build has not been approved!!!"}
-                 }
+            when {
+                expression { uatInput.buildIsUatApproved() }
+            }
+            steps {
+                echo "The build has been approved!!!"
+            }
         }
     }
 }
