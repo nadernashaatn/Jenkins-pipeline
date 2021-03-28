@@ -5,7 +5,7 @@ def uatInput = new uatInput()
 pipeline {
     agent any
     environment{
-        MY_FILE = fileExists 'approved.txt'
+        MY_FILE = fileExists 'report.txt'
     }
     stages {
         stage ('Run only if approval exists') {
