@@ -12,6 +12,9 @@ pipeline {
             steps {
                 echo "The build has been approved!!!"
             }
+            steps {
+                echo "The build has not been approved!!!"
+            }
         }
     }
 }
