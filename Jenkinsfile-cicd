@@ -1,17 +1,16 @@
 @Library('jenkins-libraries')
 
-
 pipeline {
     agent any
     stages {
         stage ('log') {
             steps {
-                script{
+                script {
                     log.info 'Starting'
                 }
             }
         }
-        stage('say Hello'){
+        stage ('say Hello'){
             steps {
                 script {
                     sayHello 'Joe'
