@@ -1,14 +1,15 @@
-@Library('jenkins-libraries')
+@Library('jenkins-libraries') _
 
 pipeline {
-    agent any
+    agent none
     stages {
-        stage ('Run only if approval exists') {
+        stage ('Example') {
             steps {
+                // log.info 'Starting'
                 script {
-                    log.info "message"
+                    log.info 'Starting'
+                    log.warning 'Nothing to do!'
                 }
-                echo "The build has been approved!!!"
             }
         }
     }
