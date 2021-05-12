@@ -1,0 +1,22 @@
+@Library('jenkins-libraries')
+
+
+pipeline {
+    agent any
+    stages {
+        stage ('log') {
+            steps {
+                script{
+                    log.info 'Starting'
+                }
+            }
+        }
+        stage('say Hello'){
+            steps {
+                script {
+                    sayHello 'Joe'
+                }
+            }
+        }
+    }
+}
