@@ -3,12 +3,21 @@
 pipeline {
     agent none
     stages {
-        stage ('Example') {
+        stage ('log') {
             steps {
                 // log.info 'Starting'
                 script {
                     log.info 'Starting'
                     log.warning 'Nothing to do!'
+                }
+            }
+        }
+
+        stage ('sayHello') {
+            steps {
+                // log.info 'Starting'
+                script {
+                    sayHello 'Joe'
                 }
             }
         }
