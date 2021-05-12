@@ -3,19 +3,29 @@
 pipeline {
     agent any
     stages {
-        stage ('log') {
-            steps {
-                script {
-                    log.info 'Starting'
-                }
-            }
-        }
-        stage ('say Hello'){
-            steps {
-                script {
-                    sayHello 'Joe'
-                }
+        stage {
+            script {
+                log.info 'starting'
             }
         }
     }
+
 }
+
+
+//         stage ('log') {
+//             steps {
+//                 script {
+//                     log.info 'Starting'
+//                 }
+//             }
+//         }
+//         stage ('say Hello'){
+//             steps {
+//                 script {
+//                     sayHello 'Joe'
+//                 }
+//             }
+//         }
+//     }
+// }
