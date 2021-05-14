@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            environment {
+                DEBUG_FLAGS = '-g'
+            }
+            steps {
+                parallel(
+                    a: {
+                        echo "This is branch a"
+                    },
+                    b: {
+                        echo "This is branch b"
+                    }
+                )
+            }
+        }
+    }
+}

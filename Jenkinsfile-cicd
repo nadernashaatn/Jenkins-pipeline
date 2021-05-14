@@ -21,5 +21,19 @@ pipeline {
                 }
             }
         }
+
+        stage ('Parallel') {
+            steps {
+                echo "${currentBuild.result}"
+            }
+        }
+        stage ('Unittest') {
+            steps {
+                // log.info 'Starting'
+                script {
+                    sayHello 'Joe'
+                }
+            }
+        }
     }
 }
