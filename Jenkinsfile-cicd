@@ -1,5 +1,5 @@
 // @Library('jenkins-libraries') _
-library 'mjenkins-libraries@master'
+library 'jenkins-libraries@master'
 pipeline {
     agent none
     stages {
